@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.quiz.ActivityQuiz">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="10dp"
+        android:layout_margin="8dp"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="255dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textview_question"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Soru"
+                android:layout_margin="8dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+            <com.google.android.material.chip.ChipGroup
+                app:singleSelection="true"
+                tools:selectionRequired="true"
+                android:id="@+id/chip_grup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textview_question"
+                app:chipSpacing="16dp">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_option_a"
+                    style="@style/ChackableChip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="answer a" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_option_b"
+                    style="@style/ChackableChip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="answer a" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_option_c"
+                    style="@style/ChackableChip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="answer a"/>
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_option_d"
+                    style="@style/ChackableChip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="answer a"/>
+            </com.google.android.material.chip.ChipGroup>
+
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/next_button"
+                android:layout_alignParentBottom="true"
+                android:text="Next"
+                android:backgroundTint="@color/colorPrimaryDark"
+                app:cornerRadius="8dp"
+                app:rippleColor="@color/colorAccent"/>
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
